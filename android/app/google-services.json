@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "368402276816",
+    "project_id": "flutter-integration-e823d",
+    "storage_bucket": "flutter-integration-e823d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368402276816:android:d2401b91a203aa5a1719d5",
+        "android_client_info": {
+          "package_name": "com.example.notification_integration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "368402276816-a467m3i0govqt9g62bt5ivqk0dvah6ae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR10TagM9DLhTyroTqFCeBtlg-_uPWowc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "368402276816-a467m3i0govqt9g62bt5ivqk0dvah6ae.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
