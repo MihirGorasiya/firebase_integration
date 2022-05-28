@@ -1,6 +1,10 @@
-# notification_integration
+# flutter Integration
 
-A new Flutter project.
+Integrated Fuctionality
+- Local/Firebase Remote Notification
+- Firebase Remote config
+- Firebase Authentication (email, phone, Gmail)
+- Banner % Interstitial Ad
 
 ## Getting Started
 
