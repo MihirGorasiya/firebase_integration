@@ -43,6 +43,13 @@ class HomePage extends StatelessWidget {
               },
               child: Text("Admob Ad Test"),
             ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(minimumSize: Size(230, 36)),
+              onPressed: () {
+                Navigator.pushNamed(context, '/firestore');
+              },
+              child: Text("Firestore Database"),
+            ),
           ],
         ),
       ),
