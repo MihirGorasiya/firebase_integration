@@ -35,7 +35,7 @@ class _FirestorePageState extends State<FirestorePage> {
           children: [
             Container(
               height: MediaQuery.of(context).size.height * 0.6,
-              width: MediaQuery.of(context).size.width * 0.6,
+              width: MediaQuery.of(context).size.width * 0.7,
               decoration: BoxDecoration(
                 color: Colors.deepOrange[400],
                 borderRadius: BorderRadius.circular(25),

@@ -2,6 +2,7 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_integration/pages/firestore_page.dart';
+import 'package:firebase_integration/pages/realtime_page.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -34,10 +35,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          textTheme: TextTheme(
-            bodyMedium: TextStyle(color: Colors.white),
-          ),
-          canvasColor: Colors.grey[900]),
+        textTheme: TextTheme(
+          bodyMedium: TextStyle(color: Colors.white),
+        ),
+        // canvasColor: Colors.grey[900],
+      ),
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       routes: {
@@ -47,6 +49,7 @@ class MyApp extends StatelessWidget {
         "/auth": (context) => FirebaseLoginAuth(),
         "/ad": (context) => AdmobAdsPage(),
         "/firestore": (context) => FirestorePage(),
+        "/realtime": (context) => RealTimePage(),
       },
     );
   }

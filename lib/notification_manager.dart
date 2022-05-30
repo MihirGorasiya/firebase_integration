@@ -56,13 +56,13 @@ class NotificationService {
     );
   }
 
-  Future<void> scheduleNotifications() async {
+  Future<void> scheduleNotifications(int min) async {
     await flutterLocalNotificationsPlugin.zonedSchedule(
         0,
         "Notification Title",
         "This is the Notification Body!",
         // tz.TZDateTime.now(tz.local).,
-        tz.TZDateTime.now(tz.local).add(const Duration(seconds: 5)),
+        tz.TZDateTime.now(tz.local).add(Duration(minutes: min)),
         NotificationDetails(android: _androidNotificationDetails),
         androidAllowWhileIdle: true,
         uiLocalNotificationDateInterpretation:
