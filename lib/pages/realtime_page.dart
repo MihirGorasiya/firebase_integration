@@ -4,6 +4,7 @@ import 'dart:convert';
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RealTimePage extends StatefulWidget {
   const RealTimePage({Key? key}) : super(key: key);
@@ -16,12 +17,20 @@ class _RealTimePageState extends State<RealTimePage> {
   // final db = FirebaseFirestore.instance;
 
   String name = "0";
-
   String mobileName = "";
-
   String laptopName = "";
-
   String earphoneName = "";
+
+  final TextStyle titleStyle = TextStyle(
+    fontSize: 20,
+    fontFamily: GoogleFonts.kdamThmor().fontFamily,
+  );
+  final TextStyle valueStyle = TextStyle(
+    color: Colors.cyanAccent,
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+    fontFamily: GoogleFonts.ubuntu().fontFamily,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -32,23 +41,32 @@ class _RealTimePageState extends State<RealTimePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.6,
+              height: MediaQuery.of(context).size.width * 0.7,
               width: MediaQuery.of(context).size.width * 0.7,
               decoration: BoxDecoration(
-                color: Colors.deepOrange[400],
+                color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(25),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("name: $name"),
-                    Text("mobile Name: $mobileName"),
-                    Text("laptop Name: $laptopName"),
-                    Text("earphone Name: $earphoneName"),
-                  ],
+                child: Center(
+                  widthFactor: 0,
+                  heightFactor: 0,
+                  child: RichText(
+                    text: TextSpan(
+                      text: "Name: ",
+                      style: titleStyle,
+                      children: [
+                        TextSpan(text: name, style: valueStyle),
+                        TextSpan(text: "\nMobile Name: ", style: titleStyle),
+                        TextSpan(text: mobileName, style: valueStyle),
+                        TextSpan(text: "\nLaptop Number: ", style: titleStyle),
+                        TextSpan(text: laptopName, style: valueStyle),
+                        TextSpan(text: "\nEarphone name: ", style: titleStyle),
+                        TextSpan(text: earphoneName, style: valueStyle),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -95,3 +113,17 @@ class _RealTimePageState extends State<RealTimePage> {
     );
   }
 }
+
+
+
+
+// Column(
+//                   mainAxisAlignment: MainAxisAlignment.center,
+//                   crossAxisAlignment: CrossAxisAlignment.start,
+//                   children: [
+//                     Text("name: $name"),
+//                     Text("mobile Name: $mobileName"),
+//                     Text("laptop Name: $laptopName"),
+//                     Text("earphone Name: $earphoneName"),
+//                   ],
+//                 ),

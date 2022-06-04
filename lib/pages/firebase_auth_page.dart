@@ -17,7 +17,7 @@ class _FirebaseLoginAuthState extends State<FirebaseLoginAuth> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
-      initialIndex: 0,
+      initialIndex: 2,
       child: Scaffold(
         appBar: AppBar(
           title: Text("Firebase Authentication"),
